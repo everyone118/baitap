@@ -19,35 +19,81 @@
           <a class="active" href="index.html">Trang chủ</a>
           <a href="tv1.html">TV1</a>
           <a href="tv2.html">TV2</a>
-          <a href="tv3.html">TV3</a>
-          <a class="nut" href="tv4.html">TV4</a>
+          <a class="nut" href="tv3.html">TV3</a>
         </div>
       </div>
     </div>
 
     <div class="hero">
-      <h1>Website Giới Thiệu</h1>
-      <p>Mẫu thiết kế thống nhất toàn site (trang chủ + trang thành viên). CSS dùng chung file ngoài.</p>
+      <h1>Website Giới Thiệu Tổ</h1>
+      <p>Trang chủ có ảnh chung của tổ, bên dưới là các ô thành viên (bấm vào để xem trang riêng).</p>
       <div class="slogan"><b>Khẩu hiệu:</b> Kỷ luật – Sáng tạo – Bứt phá</div>
     </div>
-    <div class="wave"></div>
 
-    <div class="tieude">NỘI DUNG CHÍNH</div>
+    <div class="wave"></div>
+    <div class="tieude">TRANG CHỦ</div>
 
     <main>
+      <!-- Ảnh chung của tổ -->
       <div class="box">
-        <h2>Giới thiệu nhanh</h2>
-        <p>Hoàng thượng thay nội dung theo tổ/CLB. Bên dưới là các link dẫn tới trang giới thiệu từng thành viên.</p>
+        <h2>Ảnh chung của tổ</h2>
+
+        <div class="group">
+          <div class="group-photo">
+            <!-- Đổi tên ảnh theo ý hoàng thượng -->
+            <img src="images/to.jpg" alt="Ảnh chung của tổ">
+            <div class="group-caption">Ảnh chung của tổ (file: images/to.jpg)</div>
+          </div>
+
+          <div class="box" style="margin:0;">
+            <h2>Giới thiệu nhanh</h2>
+            <p>
+              Hoàng thượng thay nội dung: tên tổ/CLB, lớp, mục tiêu, hoạt động nổi bật…
+              Bố cục và màu sắc đã đồng bộ toàn website nhờ dùng chung <b>style.css</b>.
+            </p>
+            <p>
+              Bên dưới là danh sách thành viên. Nhấn vào từng ô để mở trang giới thiệu riêng.
+            </p>
+          </div>
+        </div>
       </div>
 
+      <!-- Ô thành viên -->
       <div class="box">
-        <h2>Danh sách thành viên</h2>
-        <p>
-          • <a href="tv1.html">Thành viên 1</a><br>
-          • <a href="tv2.html">Thành viên 2</a><br>
-          • <a href="tv3.html">Thành viên 3</a><br>
-          • <a href="tv4.html">Thành viên 4</a>
-        </p>
+        <h2>Thành viên trong tổ</h2>
+
+        <div class="member-grid">
+          <!-- TV1 -->
+          <a class="member-card" href="tv1.html">
+            <!-- Nếu có ảnh: dùng img. Nếu chưa có ảnh: xoá img và dùng div.thumb -->
+            <img src="images/tv1.jpg" alt="Thành viên 1">
+            <div class="info">
+              <h3>Thành viên 1</h3>
+              <p>Vai trò: Nội dung</p>
+              <span class="badge">Bấm để xem chi tiết</span>
+            </div>
+          </a>
+
+          <!-- TV2 -->
+          <a class="member-card" href="tv2.html">
+            <img src="images/tv2.jpg" alt="Thành viên 2">
+            <div class="info">
+              <h3>Thành viên 2</h3>
+              <p>Vai trò: Thiết kế</p>
+              <span class="badge">Bấm để xem chi tiết</span>
+            </div>
+          </a>
+
+          <!-- TV3 -->
+          <a class="member-card" href="tv3.html">
+            <img src="images/tv3.jpg" alt="Thành viên 3">
+            <div class="info">
+              <h3>Thành viên 3</h3>
+              <p>Vai trò: Kiểm tra / Tổng hợp</p>
+              <span class="badge">Bấm để xem chi tiết</span>
+            </div>
+          </a>
+        </div>
       </div>
     </main>
 
@@ -58,7 +104,6 @@
         <a href="tv1.html">TV1</a>
         <a href="tv2.html">TV2</a>
         <a href="tv3.html">TV3</a>
-        <a href="tv4.html">TV4</a>
       </p>
       <p>© 2026 • Website giới thiệu tổ</p>
     </footer>
