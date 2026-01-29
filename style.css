@@ -59,14 +59,13 @@ img{ max-width:100%; height:auto; display:block; }
   border-radius: 10px;
 }
 
-/* ===== NAV ===== */
+/* ===== NAV (SỬA: nền trắng đặc, menu đồng bộ nút) ===== */
 .nav{
   position: sticky;
   top: 0;
   z-index: 5;
-  background: rgba(255,255,255,0.92);
+  background: #ffffff;              /* trắng đặc -> không loang màu */
   border-bottom: 1px solid #e3e3e3;
-  backdrop-filter: blur(4px);
 }
 .nav .wrap{
   display: flex;
@@ -81,26 +80,37 @@ img{ max-width:100%; height:auto; display:block; }
   font-size: 20px;
   letter-spacing: 0.4px;
 }
+
+/* Tất cả link trong menu đều dạng nút */
 .menu a{
   display: inline-block;
   padding: 8px 12px;
   margin: 2px 3px;
   border-radius: 12px;
-  color: #1f1f1f;
-  border: 1px solid transparent;
   font-size: 18px;
+
+  border: 1px solid #dcdcdc;
+  background: #fbfbfb;
+  color: #1f1f1f;
 }
-.menu a:hover{ border: 1px solid #d8d8d8; background: #f6f6f6; }
-.menu .nut{
+.menu a:hover{
+  background: #f3f3f3;
+}
+
+/* Trang đang đứng (active) -> gradient */
+.menu a.active{
   background: linear-gradient(to right, var(--xanh), var(--hong));
   color: white;
   border: 0;
 }
-.menu .nut:hover{ opacity: 0.92; }
-.menu .active{
-  border: 1px solid #d8d8d8;
-  background: #f0f0f0;
+
+/* Nếu muốn 1 nút luôn nổi (dù không active) */
+.menu a.nut{
+  background: linear-gradient(to right, var(--xanh), var(--hong));
+  color: white;
+  border: 0;
 }
+.menu a.nut:hover{ opacity: 0.92; }
 
 /* ===== HERO ===== */
 .hero{
@@ -169,7 +179,7 @@ img{ max-width:100%; height:auto; display:block; }
 }
 main{ position: relative; z-index: 2; padding: 16px; }
 
-/* Box chính (dùng cho từng khối lớn) */
+/* Box chính */
 .box{
   border-radius: 16px;
   border: 1px solid #e5e5e5;
@@ -181,7 +191,7 @@ main{ position: relative; z-index: 2; padding: 16px; }
 .box h2{ margin: 0 0 8px 0; font-size: 24px; color: var(--xanh); }
 .box p{ margin: 6px 0; font-size: 18px; line-height: 1.65; text-align: justify; }
 
-/* Subbox (để tránh viền lồng viền) */
+/* Subbox (tránh viền lồng viền) */
 .subbox{
   background: #ffffff;
   border: 1px solid #ededed;
@@ -231,15 +241,12 @@ main{ position: relative; z-index: 2; padding: 16px; }
 }
 .member-card:hover{ transform: translateY(-3px); }
 
-/* Nếu có ảnh thì dùng img */
 .member-card img{
   width: 100%;
   height: 160px;
   object-fit: cover;
   display: block;
 }
-
-/* Nếu thiếu ảnh, dùng khung chữ */
 .thumb{
   height: 160px;
   background: linear-gradient(to right, rgba(11,111,164,0.85), rgba(255,61,127,0.75));
@@ -251,7 +258,6 @@ main{ position: relative; z-index: 2; padding: 16px; }
   text-align: center;
   padding: 10px;
 }
-
 .member-card .info{ padding: 12px; }
 .member-card .info h3{
   margin: 0 0 6px 0;
