@@ -2,111 +2,163 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trang chủ - Giới thiệu tổ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu Tổ học tập</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="khung">
 
-    <div class="topbar"><b>DỰ ÁN</b> • Website giới thiệu tổ</div>
-
-    <div class="nav">
-      <div class="wrap">
-        <div class="logo">TỔ / CLB</div>
-        <div class="menu">
-          <a class="active" href="index.html">Trang chủ</a>
-          <a href="tv1.html">TV1</a>
-          <a href="tv2.html">TV2</a>
-          <a href="tv3.html">TV3</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero">
-      <h1>Website Giới Thiệu Tổ</h1>
-      <p>Trang chủ có ảnh chung của tổ, dưới là các ô thành viên (bấm vào để xem trang riêng).</p>
-      <div class="slogan"><b>Khẩu hiệu:</b> Kỷ luật – Sáng tạo – Bứt phá</div>
-    </div>
-
-    <div class="wave"></div>
-    <div class="tieude">TRANG CHỦ</div>
-
-    <main>
-      <!-- Ảnh chung + giới thiệu (không còn viền lồng viền) -->
-      <div class="box">
-        <h2>Ảnh chung của tổ</h2>
-
-        <div class="group">
-          <div class="group-photo">
-            <img src="images/to.jpg" alt="Ảnh chung của tổ">
-            <div class="group-caption">Ảnh chung của tổ (file: images/to.jpg)</div>
-          </div>
-
-          <div class="subbox">
-            <h2>Giới thiệu nhanh</h2>
-            <p>
-              Hoàng thượng thay nội dung: tên tổ/CLB, lớp, mục tiêu, hoạt động nổi bật…
-              Website dùng chung một mẫu thiết kế và dùng chung <b>style.css</b>.
-            </p>
-            <p>
-              Bên dưới là danh sách thành viên. Nhấn vào từng ô để mở trang giới thiệu riêng.
-            </p>
-          </div>
-        </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <div class="brand-title">TỔ HỌC TẬP (ĐIỀN TÊN TỔ)</div>
+        <div class="brand-subtitle">Khẩu hiệu: (điền sau)</div>
       </div>
 
-      <!-- Ô thành viên -->
-      <div class="box">
-        <h2>Thành viên trong tổ</h2>
-
-        <div class="member-grid">
-          <a class="member-card" href="tv1.html">
-            <img src="images/tv1.jpg" alt="Thành viên 1">
-            <div class="info">
-              <h3>Thành viên 1</h3>
-              <p>Vai trò: Nội dung</p>
-              <span class="badge">Bấm để xem chi tiết</span>
-            </div>
-          </a>
-
-          <a class="member-card" href="tv2.html">
-            <img src="images/tv2.jpg" alt="Thành viên 2">
-            <div class="info">
-              <h3>Thành viên 2</h3>
-              <p>Vai trò: Thiết kế</p>
-              <span class="badge">Bấm để xem chi tiết</span>
-            </div>
-          </a>
-
-          <a class="member-card" href="tv3.html">
-            <img src="images/tv3.jpg" alt="Thành viên 3">
-            <div class="info">
-              <h3>Thành viên 3</h3>
-              <p>Vai trò: Tổng hợp / Kiểm tra</p>
-              <span class="badge">Bấm để xem chi tiết</span>
-            </div>
-          </a>
-        </div>
-
-        <!-- Nếu hoàng thượng CHƯA có ảnh, thay <img ...> bằng:
-             <div class="thumb">Thành viên 1<br>(chưa có ảnh)</div>
-        -->
-      </div>
-    </main>
-
-    <footer>
-      <p><span>CUỐI TRANG (FOOTER)</span></p>
-      <p><b>Trang thành viên:</b></p>
-      <p>
+      <nav class="nav">
+        <a class="active" href="index.html">Trang chủ</a>
         <a href="tv1.html">TV1</a>
         <a href="tv2.html">TV2</a>
         <a href="tv3.html">TV3</a>
-      </p>
-      <p>© 2026 • Website giới thiệu tổ</p>
-    </footer>
+        <a href="tv4.html">TV4</a>
+        <a href="tv5.html">TV5</a>
+        <a href="tv6.html">TV6</a>
+      </nav>
+    </div>
+  </header>
 
-  </div>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-box">
+        <h1>Học cùng nhau – Tiến bộ cùng nhau</h1>
+        <p>
+          Website tĩnh (HTML + CSS) giới thiệu tổ học tập: ảnh tập thể, danh sách thành viên,
+          và trang riêng cho từng người. Hoàng thượng chỉ cần thay nội dung thật là xong.
+        </p>
+
+        <div class="hero-badges">
+          <div class="badge">📌 Mục tiêu: (điền sau)</div>
+          <div class="badge">🤝 Tinh thần: (điền sau)</div>
+          <div class="badge">🗓️ Lịch sinh hoạt: (điền sau)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="container">
+
+      <section class="section">
+        <h2 class="section-title">Ảnh tập thể của tổ</h2>
+        <div class="team-photo">
+          <img src="images/to.jpg" alt="Ảnh tập thể của tổ học tập">
+        </div>
+        <p class="muted">Thay ảnh tại: <strong>images/to.jpg</strong></p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Danh sách thành viên (6 người)</h2>
+        <p class="muted">Nhấp vào thẻ để mở trang giới thiệu riêng của từng thành viên.</p>
+
+        <div class="card-grid">
+
+          <a class="card" href="tv1.html">
+            <div class="card-cover">
+              <div class="card-avatar"><img src="images/tv1.jpg" alt="Ảnh TV1"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">TV1 – (Điền họ tên)</h3>
+              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="card-tags">
+                <span class="tag">(tag 1)</span><span class="tag">(tag 2)</span><span class="tag">(tag 3)</span>
+              </div>
+              <span class="card-cta">Xem chi tiết →</span>
+            </div>
+          </a>
+
+          <a class="card" href="tv2.html">
+            <div class="card-cover">
+              <div class="card-avatar"><img src="images/tv2.jpg" alt="Ảnh TV2"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">TV2 – (Điền họ tên)</h3>
+              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="card-tags">
+                <span class="tag">(tag 1)</span><span class="tag">(tag 2)</span><span class="tag">(tag 3)</span>
+              </div>
+              <span class="card-cta">Xem chi tiết →</span>
+            </div>
+          </a>
+
+          <a class="card" href="tv3.html">
+            <div class="card-cover">
+              <div class="card-avatar"><img src="images/tv3.jpg" alt="Ảnh TV3"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">TV3 – (Điền họ tên)</h3>
+              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="card-tags">
+                <span class="tag">(tag 1)</span><span class="tag">(tag 2)</span><span class="tag">(tag 3)</span>
+              </div>
+              <span class="card-cta">Xem chi tiết →</span>
+            </div>
+          </a>
+
+          <a class="card" href="tv4.html">
+            <div class="card-cover">
+              <div class="card-avatar"><img src="images/tv4.jpg" alt="Ảnh TV4"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">TV4 – (Điền họ tên)</h3>
+              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="card-tags">
+                <span class="tag">(tag 1)</span><span class="tag">(tag 2)</span><span class="tag">(tag 3)</span>
+              </div>
+              <span class="card-cta">Xem chi tiết →</span>
+            </div>
+          </a>
+
+          <a class="card" href="tv5.html">
+            <div class="card-cover">
+              <div class="card-avatar"><img src="images/tv5.jpg" alt="Ảnh TV5"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">TV5 – (Điền họ tên)</h3>
+              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="card-tags">
+                <span class="tag">(tag 1)</span><span class="tag">(tag 2)</span><span class="tag">(tag 3)</span>
+              </div>
+              <span class="card-cta">Xem chi tiết →</span>
+            </div>
+          </a>
+
+          <a class="card" href="tv6.html">
+            <div class="card-cover">
+              <div class="card-avatar"><img src="images/tv6.jpg" alt="Ảnh TV6"></div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-name">TV6 – (Điền họ tên)</h3>
+              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="card-tags">
+                <span class="tag">(tag 1)</span><span class="tag">(tag 2)</span><span class="tag">(tag 3)</span>
+              </div>
+              <span class="card-cta">Xem chi tiết →</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2026 • Website giới thiệu tổ học tập</div>
+      <div>GitHub Pages • HTML + CSS</div>
+    </div>
+  </footer>
+
 </body>
 </html>
