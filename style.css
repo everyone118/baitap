@@ -305,4 +305,260 @@ body{
 }
 
 .split.reverse{
-  flex-direction: row-revers
+  flex-direction: row-reverse;
+}
+
+.split .col{
+  flex: 1;
+  min-width: 0;
+}
+
+.photo{
+  border-radius: 14px;
+  border: 2px solid var(--line);
+  background: #fff;
+  overflow: hidden;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 9999px rgba(0,0,0,0.04);
+}
+
+.info-box{
+  border-radius: 14px;
+  border: 1px solid rgba(245,158,11,0.30);
+  background: linear-gradient(180deg, rgba(255,247,237,0.95), rgba(255,255,255,0.92));
+  padding: 14px;
+}
+
+.info-box h3{
+  margin: 0 0 8px 0;
+  color: var(--deep);
+  font-size: 16px;
+}
+
+.info-box ul{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.quote{
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-left: 4px solid rgba(220,38,38,0.65);
+  background: rgba(220,38,38,0.06);
+  border-radius: 10px;
+}
+
+/* ===== CARDS 6 THÀNH VIÊN ===== */
+.card-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.card{
+  width: calc(33.333% - 9.5px);
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid rgba(245,158,11,0.30);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  position: relative;
+}
+
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  pointer-events:none;
+  box-shadow: inset 0 0 0 2px rgba(245,158,11,0.12);
+}
+
+.card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(220,38,38,0.35);
+  box-shadow: 0 16px 34px rgba(127,29,29,0.12);
+}
+
+.card-cover{
+  height: 120px;
+  background: linear-gradient(135deg, rgba(245,158,11,0.25), rgba(220,38,38,0.18));
+  position: relative;
+}
+
+.card-avatar{
+  position: absolute;
+  left: 14px;
+  bottom: -26px;
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  background: #f3f4f6;
+}
+
+.card-avatar .avatar-bg{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body{
+  padding: 34px 14px 14px 14px;
+}
+
+.card-name{
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--deep);
+}
+
+.card-meta{
+  margin: 4px 0 10px 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag{
+  font-size: 12px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(255,247,237,0.9);
+  border: 1px solid rgba(245,158,11,0.30);
+}
+
+.card-cta{
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--deep), #991b1b);
+  color: #fff;
+  font-size: 13px;
+  border: 1px solid rgba(245,158,11,0.35);
+}
+
+.card-cta:hover{ opacity: 0.95; }
+
+/* ===== TRANG THÀNH VIÊN ===== */
+.profile{
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.profile-left{
+  width: 260px;
+  flex: 0 0 260px;
+}
+
+.profile-photo{
+  border-radius: 16px;
+  border: 2px solid var(--line);
+  overflow: hidden;
+  background: #fff;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-right{ flex: 1; }
+
+.profile-name{
+  margin: 0 0 6px 0;
+  font-size: 22px;
+  color: var(--deep);
+}
+
+.profile-role{
+  margin: 0 0 12px 0;
+  color: var(--red);
+  font-weight: bold;
+}
+
+.profile-box{
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(245,158,11,0.30);
+  background: rgba(255,247,237,0.92);
+}
+
+.pager{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.pager a{
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(245,158,11,0.35);
+  background: #fff;
+  font-size: 14px;
+}
+
+.pager a:hover{
+  background: rgba(220,38,38,0.06);
+  border-color: rgba(220,38,38,0.35);
+}
+
+/* ===== FOOTER ===== */
+.site-footer{
+  position: relative;
+  z-index: 5;
+  border-top: 2px solid var(--line);
+  background: rgba(255,247,237,0.92);
+  padding: 16px 0;
+}
+
+.footer-inner{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .card{ width: calc(50% - 7px); }
+  .split, .split.reverse{ flex-direction: column; }
+  .photo{ height: 240px; }
+  .profile{ flex-direction: column; }
+  .profile-left{ width: 100%; flex: 0 0 auto; }
+  .profile-photo{ height: 320px; }
+  /* rồng nhỏ lại cho màn hình vừa */
+  .hero-box::before{
+    background-size: 280px auto, 320px auto;
+    background-position: left -80px top 30px, right -90px bottom;
+  }
+}
+
+@media (max-width: 520px){
+  .hero h1{ font-size: 22px; }
+  .card{ width: 100%; min-width: 0; }
+  .photo{ height: 220px; }
+  /* rồng chìm hơn cho màn hình nhỏ */
+  .hero-box::before{
+    opacity: 0.12;
+    background-size: 240px auto, 280px auto;
+    background-position: left -90px top 20px, right -110px bottom;
+  }
+}
