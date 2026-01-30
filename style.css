@@ -40,7 +40,7 @@ body{
 .petals{
   position: fixed;
   inset: 0;
-  pointer-events: none; /* không chặn click */
+  pointer-events: none;
   overflow: hidden;
   z-index: 1;
 }
@@ -148,23 +148,23 @@ body{
   box-shadow: 0 16px 34px rgba(127,29,29,0.18);
 }
 
-/* ====== RỒNG NỀN TRONG BANNER ======
-   - cần 2 file PNG nền trong suốt:
-     images/dragon-left.png
-     images/dragon-right.png
+/* ====== RỒNG NỀN TRONG BANNER (1 ẢNH) ======
+   - đặt ảnh tại: images/dragon-frame.png
+   - ảnh đang có nền đen => dùng mix-blend-mode để "tan" nền đen
 */
 .hero-box::before{
   content:"";
   position: absolute;
   inset: 0;
-  background-image:
-    url("images/dragon-left.png"),
-    url("images/dragon-right.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: left -60px center, right -70px bottom;
-  background-size: 340px auto, 380px auto;
-  opacity: 0.16;            /* độ chìm rồng */
-  pointer-events: none;     /* không chặn click */
+
+  background-image: url("./images/dragon-frame.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;     /* phủ kín banner */
+
+  opacity: 0.65;              /* chỉnh: 0.55 - 0.80 */
+  mix-blend-mode: screen;     /* khử nền đen */
+  pointer-events: none;
   z-index: 1;
 }
 
@@ -297,7 +297,7 @@ body{
   margin: 6px 0 0 0;
 }
 
-/* ===== 2 HÀNG: MỖI HÀNG 2 CỘT (ẢNH + THÔNG TIN) ===== */
+/* ===== 2 HÀNG: MỖI HÀNG 2 CỘp (ẢNH + THÔNG TIN) ===== */
 .split{
   display: flex;
   gap: 16px;
@@ -453,70 +453,6 @@ body{
 
 .card-cta:hover{ opacity: 0.95; }
 
-/* ===== TRANG THÀNH VIÊN ===== */
-.profile{
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.profile-left{
-  width: 260px;
-  flex: 0 0 260px;
-}
-
-.profile-photo{
-  border-radius: 16px;
-  border: 2px solid var(--line);
-  overflow: hidden;
-  background: #fff;
-  height: 260px;
-  background-size: cover;
-  background-position: center;
-}
-
-.profile-right{ flex: 1; }
-
-.profile-name{
-  margin: 0 0 6px 0;
-  font-size: 22px;
-  color: var(--deep);
-}
-
-.profile-role{
-  margin: 0 0 12px 0;
-  color: var(--red);
-  font-weight: bold;
-}
-
-.profile-box{
-  margin-top: 12px;
-  padding: 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(245,158,11,0.30);
-  background: rgba(255,247,237,0.92);
-}
-
-.pager{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
-}
-
-.pager a{
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(245,158,11,0.35);
-  background: #fff;
-  font-size: 14px;
-}
-
-.pager a:hover{
-  background: rgba(220,38,38,0.06);
-  border-color: rgba(220,38,38,0.35);
-}
-
 /* ===== FOOTER ===== */
 .site-footer{
   position: relative;
@@ -541,13 +477,11 @@ body{
   .card{ width: calc(50% - 7px); }
   .split, .split.reverse{ flex-direction: column; }
   .photo{ height: 240px; }
-  .profile{ flex-direction: column; }
-  .profile-left{ width: 100%; flex: 0 0 auto; }
-  .profile-photo{ height: 320px; }
-  /* rồng nhỏ lại cho màn hình vừa */
+  /* banner: rồng nhẹ hơn chút trên màn vừa */
   .hero-box::before{
-    background-size: 280px auto, 320px auto;
-    background-position: left -80px top 30px, right -90px bottom;
+    opacity: 0.55;
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -555,10 +489,10 @@ body{
   .hero h1{ font-size: 22px; }
   .card{ width: 100%; min-width: 0; }
   .photo{ height: 220px; }
-  /* rồng chìm hơn cho màn hình nhỏ */
+  /* banner: rồng chìm hơn trên màn nhỏ */
   .hero-box::before{
-    opacity: 0.12;
-    background-size: 240px auto, 280px auto;
-    background-position: left -90px top 20px, right -110px bottom;
+    opacity: 0.45;
+    background-size: cover;
+    background-position: center;
   }
 }
