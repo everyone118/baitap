@@ -152,18 +152,18 @@ body{
   overflow:hidden;
 }
 
-/* ✅ DÁN ẢNH RỒNG VÀO BACKGROUND BANNER (chỗ hoàng thượng khoanh) */
+/* (Tuỳ chọn) rồng ở nền banner ngoài khung: cho rất nhạt thôi */
 .banner::before{
   content:"";
   position:absolute;
   inset:0;
   background: url("./images/dragon-frame.png") no-repeat center;
   background-size: contain;
-  opacity:0.35;                 /* tăng lên để thấy rõ */
+  opacity:0.12;
   pointer-events:none;
   z-index:0;
-  mix-blend-mode: screen;       /* vàng nổi trên nền đỏ */
-  filter: drop-shadow(0 18px 45px rgba(0,0,0,0.22));
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 18px 45px rgba(0,0,0,0.18));
 }
 
 /* shimmer quét nhẹ */
@@ -184,63 +184,18 @@ body{
   100%{ transform: translateX(-30%) rotate(18deg); }
 }
 
-/* đảm bảo nội dung + đèn lồng nằm trên lớp rồng */
+/* đảm bảo nội dung nằm trên */
 .banner-inner{ position:relative; z-index:2; }
-.lanterns{ position:absolute; left:0; top:0; width:100%; height:100%; pointer-events:none; z-index:3; }
 
-.banner-box{
-  position:relative;
-  background: rgba(255,255,255,0.86);
-  border-radius: 16px;
-  padding: 18px 16px;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 16px 34px rgba(0,0,0,0.14);
-  overflow:hidden;
-}
-
-.banner-box::before{
-  content:"";
-  position:absolute; inset:-30px;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(255,205,120,0.30) 0 2px, transparent 3px),
-    radial-gradient(circle at 85% 25%, rgba(255,120,140,0.22) 0 2px, transparent 3px),
-    radial-gradient(circle at 30% 80%, rgba(255,255,255,0.35) 0 2px, transparent 3px);
-  opacity:0.8;
+/* ========== ĐÈN LỒNG (NẰM TRÊN TẤT CẢ) ========== */
+.lanterns{
+  position:absolute;
+  left:0; top:0;
+  width:100%; height:100%;
   pointer-events:none;
+  z-index:5;
 }
 
-.banner-title{
-  position:relative;
-  font-size:18px;
-  font-weight:bold;
-  margin:0 0 6px 0;
-}
-
-.banner-note{
-  position:relative;
-  font-size:13px;
-  color:#444;
-}
-
-.badge-row{
-  position:relative;
-  margin-top:10px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.mini-badge{
-  display:inline-block;
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
-  background: rgba(183, 31, 47, 0.08);
-  border: 1px solid rgba(183, 31, 47, 0.12);
-  color:#7c1b28;
-}
-
-/* ========== ĐÈN LỒNG ========== */
 .lantern{
   position:absolute;
   top:8px;
@@ -282,6 +237,82 @@ body{
   0%{ transform: rotate(-2.2deg); }
   50%{ transform: rotate(2.2deg); }
   100%{ transform: rotate(-2.2deg); }
+}
+
+/* ========== ✅ BANNER-BOX (RỒNG NẰM TRONG NỀN TRẮNG, KHÔNG BỊ CHE) ========== */
+.banner-box{
+  position:relative;
+  border-radius: 16px;
+  padding: 18px 16px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.14);
+  overflow:hidden;
+
+  /* nền trắng hơi trong để watermark đẹp */
+  background: rgba(255,255,255,0.88);
+}
+
+/* ✅ RỒNG WATERMARK TRONG KHUNG TRẮNG */
+.banner-box::before{
+  content:"";
+  position:absolute;
+  inset:-22px; /* nới ra để khung rồng không bị cụt */
+  background: url("./images/dragon-frame.png") no-repeat center;
+  background-size: contain;
+  opacity:0.22;            /* tăng/giảm tại đây nếu muốn */
+  pointer-events:none;
+  z-index:0;
+
+  /* trên nền trắng, multiply giúp vàng hiện rõ hơn */
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 10px 26px rgba(0,0,0,0.12));
+}
+
+/* hoa văn chấm nhẹ nằm trên watermark */
+.banner-box::after{
+  content:"";
+  position:absolute; inset:-30px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,205,120,0.30) 0 2px, transparent 3px),
+    radial-gradient(circle at 85% 25%, rgba(255,120,140,0.22) 0 2px, transparent 3px),
+    radial-gradient(circle at 30% 80%, rgba(255,255,255,0.35) 0 2px, transparent 3px);
+  opacity:0.75;
+  pointer-events:none;
+  z-index:1;
+}
+
+/* Nội dung chữ luôn nằm trên cùng */
+.banner-title, .banner-note, .badge-row{
+  position:relative;
+  z-index:2;
+}
+
+.banner-title{
+  font-size:18px;
+  font-weight:bold;
+  margin:0 0 6px 0;
+}
+
+.banner-note{
+  font-size:13px;
+  color:#444;
+}
+
+.badge-row{
+  margin-top:10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.mini-badge{
+  display:inline-block;
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  background: rgba(183, 31, 47, 0.08);
+  border: 1px solid rgba(183, 31, 47, 0.12);
+  color:#7c1b28;
 }
 
 /* ========== SLOGAN ========== */
