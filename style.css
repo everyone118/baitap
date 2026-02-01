@@ -31,9 +31,9 @@ body{
   border-radius:2px 10px 2px 10px;
   opacity:0.75;
   background:linear-gradient(135deg,#ffd3e1,#fff1b8);
-  animation-name: fall, sway, spin;
-  animation-timing-function: linear, ease-in-out, linear;
-  animation-iteration-count: infinite, infinite, infinite;
+  animation-name: fall, sway;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
   will-change: transform;
 }
 
@@ -46,10 +46,6 @@ body{
   50%{ margin-left:18px; }
   100%{ margin-left:0px; }
 }
-@keyframes spin{
-  0%{ filter: hue-rotate(0deg); }
-  100%{ filter: hue-rotate(20deg); }
-}
 
 /* ========== SPARKLES ========== */
 .sparkles{
@@ -61,19 +57,17 @@ body{
     radial-gradient(circle at 10% 15%, rgba(255,215,120,0.55) 0 2px, transparent 3px),
     radial-gradient(circle at 18% 28%, rgba(255,120,140,0.45) 0 2px, transparent 3px),
     radial-gradient(circle at 84% 22%, rgba(255,215,120,0.45) 0 2px, transparent 3px),
-    radial-gradient(circle at 92% 40%, rgba(255,120,140,0.40) 0 2px, transparent 3px),
-    radial-gradient(circle at 40% 10%, rgba(255,255,255,0.50) 0 1px, transparent 2px),
-    radial-gradient(circle at 65% 35%, rgba(255,255,255,0.40) 0 1px, transparent 2px);
+    radial-gradient(circle at 92% 40%, rgba(255,120,140,0.40) 0 2px, transparent 3px);
   animation: sparkleDrift 9s ease-in-out infinite;
 }
 
 @keyframes sparkleDrift{
-  0%{ transform: translateY(0px); filter: blur(0px); }
-  50%{ transform: translateY(16px); filter: blur(0.2px); }
-  100%{ transform: translateY(0px); filter: blur(0px); }
+  0%{ transform: translateY(0px); }
+  50%{ transform: translateY(16px); }
+  100%{ transform: translateY(0px); }
 }
 
-/* ========== HEADER (TẾT: ĐỎ – VÀNG) ========== */
+/* ========== HEADER ========== */
 .site-header{
   background:
     radial-gradient(circle at 20% 10%, rgba(255,230,140,0.35), transparent 55%),
@@ -152,48 +146,15 @@ body{
   overflow:hidden;
 }
 
-/* (Tuỳ chọn) rồng ở nền banner ngoài khung: cho rất nhạt thôi */
-.banner::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: url("./images/dragon-frame.png") no-repeat center;
-  background-size: contain;
-  opacity:0.12;
-  pointer-events:none;
-  z-index:0;
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 18px 45px rgba(0,0,0,0.18));
-}
-
-/* shimmer quét nhẹ */
-.banner::after{
-  content:"";
-  position:absolute; inset:-40% -60%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.24), transparent);
-  transform: rotate(18deg);
-  animation: bannerShimmer 6.8s ease-in-out infinite;
-  pointer-events:none;
-  opacity:0.75;
-  z-index:1;
-}
-
-@keyframes bannerShimmer{
-  0%{ transform: translateX(-30%) rotate(18deg); }
-  50%{ transform: translateX(30%) rotate(18deg); }
-  100%{ transform: translateX(-30%) rotate(18deg); }
-}
-
-/* đảm bảo nội dung nằm trên */
 .banner-inner{ position:relative; z-index:2; }
 
-/* ========== ĐÈN LỒNG (NẰM TRÊN TẤT CẢ) ========== */
+/* ========== ĐÈN LỒNG ========== */
 .lanterns{
   position:absolute;
   left:0; top:0;
   width:100%; height:100%;
   pointer-events:none;
-  z-index:5;
+  z-index:4;
 }
 
 .lantern{
@@ -239,49 +200,33 @@ body{
   100%{ transform: rotate(-2.2deg); }
 }
 
-/* ========== ✅ BANNER-BOX (RỒNG NẰM TRONG NỀN TRẮNG, KHÔNG BỊ CHE) ========== */
+/* ========== Ô TRẮNG + RỒNG WATERMARK ========== */
 .banner-box{
   position:relative;
-  border-radius: 16px;
-  padding: 18px 16px;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 16px 34px rgba(0,0,0,0.14);
-  overflow:hidden;
-
-  /* nền trắng hơi trong để watermark đẹp */
   background: rgba(255,255,255,0.88);
+  border-radius:16px;
+  padding:18px 16px;
+  border:1px solid rgba(0,0,0,0.08);
+  box-shadow:0 16px 34px rgba(0,0,0,0.14);
+  overflow:hidden;
 }
 
-/* ✅ RỒNG WATERMARK TRONG KHUNG TRẮNG */
-.banner-box::before{
-  content:"";
+.dragon-watermark{
   position:absolute;
-  inset:-22px; /* nới ra để khung rồng không bị cụt */
+  inset:-18px;
   background: url("./images/dragon-frame.png") no-repeat center;
   background-size: contain;
-  opacity:0.22;            /* tăng/giảm tại đây nếu muốn */
-  pointer-events:none;
-  z-index:0;
-
-  /* trên nền trắng, multiply giúp vàng hiện rõ hơn */
-  mix-blend-mode: multiply;
-  filter: drop-shadow(0 10px 26px rgba(0,0,0,0.12));
-}
-
-/* hoa văn chấm nhẹ nằm trên watermark */
-.banner-box::after{
-  content:"";
-  position:absolute; inset:-30px;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(255,205,120,0.30) 0 2px, transparent 3px),
-    radial-gradient(circle at 85% 25%, rgba(255,120,140,0.22) 0 2px, transparent 3px),
-    radial-gradient(circle at 30% 80%, rgba(255,255,255,0.35) 0 2px, transparent 3px);
-  opacity:0.75;
+  opacity:0.30;
   pointer-events:none;
   z-index:1;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 12px 30px rgba(0,0,0,0.12));
+  /* Nếu muốn rồng xuống dưới chút: bật dòng dưới
+  background-position: center 65%;
+  */
 }
 
-/* Nội dung chữ luôn nằm trên cùng */
+/* Nội dung nằm trên watermark */
 .banner-title, .banner-note, .badge-row{
   position:relative;
   z-index:2;
@@ -354,27 +299,11 @@ body{
   position:relative;
 }
 
-.members::before{
-  content:"";
-  position:absolute; inset:-2px;
-  background: linear-gradient(90deg, rgba(255,215,120,0.0), rgba(255,215,120,0.25), rgba(255,215,120,0.0));
-  animation: borderSweep 5.2s ease-in-out infinite;
-  pointer-events:none;
-  opacity:0.6;
-}
-
-@keyframes borderSweep{
-  0%{ transform: translateX(-30%); }
-  50%{ transform: translateX(30%); }
-  100%{ transform: translateX(-30%); }
-}
-
 .members td{
   width:50%;
   border:2px solid #e6c27a;
   padding:0;
   vertical-align:top;
-  position:relative;
   background: #fffdf7;
 }
 
@@ -392,33 +321,10 @@ body{
   overflow:hidden;
 }
 
-.member::before{
-  content:"";
-  position:absolute;
-  top:-30%; left:-60%;
-  width:70%; height:160%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
-  transform: rotate(18deg);
-  opacity:0.0;
-  transition: opacity 0.18s ease;
-  pointer-events:none;
-}
-
 .member:hover{
   transform: translateY(-2px);
   box-shadow: 0 14px 26px rgba(0,0,0,0.14);
   background: #fff7ef;
-}
-
-.member:hover::before{
-  opacity:0.85;
-  animation: cellShimmer 1.2s ease-in-out infinite;
-}
-
-@keyframes cellShimmer{
-  0%{ transform: translateX(-10%) rotate(18deg); }
-  50%{ transform: translateX(20%) rotate(18deg); }
-  100%{ transform: translateX(-10%) rotate(18deg); }
 }
 
 .member-wide{
@@ -439,7 +345,7 @@ body{
   box-shadow: 0 12px 22px rgba(0,0,0,0.12);
 }
 
-.member-info{ flex:1; position:relative; }
+.member-info{ flex:1; }
 .member-name{ font-weight:bold; margin:2px 0 6px 0; }
 .member-desc{ font-size:13px; color:#555; line-height:1.4; }
 .member-cta{ margin-top:10px; display:inline-block; font-size:13px; font-weight:bold; color:#0f6b8c; }
@@ -452,17 +358,6 @@ body{
   border-top: 4px solid rgba(0,0,0,0.12);
   position:relative;
   overflow:hidden;
-}
-
-.site-footer::before{
-  content:"";
-  position:absolute; inset:-20px;
-  background:
-    radial-gradient(circle at 10% 30%, rgba(255,215,120,0.22), transparent 45%),
-    radial-gradient(circle at 80% 40%, rgba(255,120,140,0.18), transparent 48%),
-    radial-gradient(circle at 50% 110%, rgba(255,255,255,0.12), transparent 55%);
-  opacity:0.9;
-  pointer-events:none;
 }
 
 .footer-inner{ position:relative; }
@@ -509,7 +404,7 @@ body{
 
 /* ========== GIẢM CHUYỂN ĐỘNG ========== */
 @media (prefers-reduced-motion: reduce){
-  .petal, .sparkles, .site-header, .banner::after, .members::before, .lantern{
+  .petal, .sparkles, .site-header, .lantern{
     animation: none !important;
   }
   .member:hover{ transform:none; }
