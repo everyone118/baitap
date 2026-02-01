@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tổ học tập - Chủ đề Tết</title>
+  <title>Trang chủ - Giới thiệu thành viên tổ</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
-  <!-- HIỆU ỨNG HOA RƠI -->
-  <div class="petals">
-    <span class="petal" style="left:5%;  animation-duration:10s,3s; animation-delay:0s,0s;"></span>
-    <span class="petal" style="left:12%; animation-duration:12s,4s; animation-delay:2s,1s;"></span>
-    <span class="petal" style="left:20%; animation-duration:11s,3.5s; animation-delay:1s,0s;"></span>
-    <span class="petal" style="left:28%; animation-duration:13s,4.2s; animation-delay:3s,1s;"></span>
-    <span class="petal" style="left:36%; animation-duration:10.5s,3.8s; animation-delay:0.5s,0s;"></span>
+  <!-- HIỆU ỨNG HOA RƠI (TRANG TRÍ) -->
+  <div class="petals" aria-hidden="true">
+    <span class="petal" style="left:5%;  animation-duration:10s,3s;  animation-delay:0s,0s;"></span>
+    <span class="petal" style="left:12%; animation-duration:12s,4s;  animation-delay:2s,1s;"></span>
+    <span class="petal" style="left:20%; animation-duration:11s,3.5s;animation-delay:1s,0s;"></span>
+    <span class="petal" style="left:28%; animation-duration:13s,4.2s;animation-delay:3s,1s;"></span>
+    <span class="petal" style="left:36%; animation-duration:10.5s,3.8s;animation-delay:0.5s,0s;"></span>
     <span class="petal" style="left:44%; animation-duration:12.5s,4s; animation-delay:2.5s,1s;"></span>
-    <span class="petal" style="left:52%; animation-duration:11.2s,3.6s; animation-delay:1.2s,0s;"></span>
-    <span class="petal" style="left:60%; animation-duration:13.2s,4.4s; animation-delay:3.2s,1s;"></span>
-    <span class="petal" style="left:68%; animation-duration:10.8s,3.4s; animation-delay:0.8s,0s;"></span>
-    <span class="petal" style="left:76%; animation-duration:12.8s,4.1s; animation-delay:2.8s,1s;"></span>
-    <span class="petal" style="left:84%; animation-duration:11.6s,3.7s; animation-delay:1.6s,0s;"></span>
-    <span class="petal" style="left:92%; animation-duration:13.6s,4.6s; animation-delay:3.6s,1s;"></span>
+    <span class="petal" style="left:52%; animation-duration:11.2s,3.6s;animation-delay:1.2s,0s;"></span>
+    <span class="petal" style="left:60%; animation-duration:13.2s,4.4s;animation-delay:3.2s,1s;"></span>
+    <span class="petal" style="left:68%; animation-duration:10.8s,3.4s;animation-delay:0.8s,0s;"></span>
+    <span class="petal" style="left:76%; animation-duration:12.8s,4.1s;animation-delay:2.8s,1s;"></span>
+    <span class="petal" style="left:84%; animation-duration:11.6s,3.7s;animation-delay:1.6s,0s;"></span>
+    <span class="petal" style="left:92%; animation-duration:13.6s,4.6s;animation-delay:3.6s,1s;"></span>
   </div>
 
-  <!-- HEADER -->
+  <!-- SPARKLES / PHÁO HOA NHẸ (TRANG TRÍ) -->
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <!-- ĐẦU TRANG (HEADER) -->
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="container header-top">
       <div class="brand">
-        <div class="brand-title">TỔ HỌC TẬP (ĐIỀN TÊN TỔ)</div>
-        <div class="brand-subtitle">Chúc mừng năm mới • Học tốt – Vui Tết – Vẫn lên điểm</div>
+        <div class="brand-title">TỔ HỌC TẬP: (ĐIỀN TÊN TỔ)</div>
+        <div class="brand-subtitle">Trang chủ giới thiệu thành viên • Chủ đề Tết (trang trí)</div>
       </div>
 
       <nav class="nav">
@@ -41,195 +43,185 @@
         <a href="./tv4.html">TV4</a>
         <a href="./tv5.html">TV5</a>
         <a href="./tv6.html">TV6</a>
+        <a href="./tv7.html">TV7</a>
+        <a href="./tv8.html">TV8</a>
+        <a href="./tv9.html">TV9</a>
       </nav>
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-box">
-        <div class="lanterns">
-          <div class="lantern l1"></div>
-          <div class="lantern l2"></div>
-          <div class="lantern l3"></div>
-        </div>
+    <!-- BANNER -->
+    <div class="banner">
+      <!-- Đèn lồng trang trí -->
+      <div class="lanterns" aria-hidden="true">
+        <div class="lantern l1"></div>
+        <div class="lantern l2"></div>
+        <div class="lantern l3"></div>
+      </div>
 
-        <h1>🎉 TẾT ĐẾN RỒI — TỔ MÌNH CÀNG PHẢI “CHÁY” 🎉</h1>
-        <p>
-          Banner có hiệu ứng lồng đèn + hoa rơi và nền rồng.
-          Muốn hiện rồng: đặt ảnh tại <strong>images/dragon-frame.png</strong>.
-        </p>
+      <div class="banner-inner container">
+        <div class="banner-box">
+          <div class="banner-title">BANNER</div>
+          <div class="banner-note">
+            Nếu muốn banner ảnh: đặt ảnh tại <strong>images/banner.jpg</strong>.
+            Khung rồng (nếu có): <strong>images/dragon-frame.png</strong>.
+          </div>
 
-        <div class="hero-badges">
-          <div class="badge">🧧 Khẩu hiệu: (điền)</div>
-          <div class="badge">🌸 Mục tiêu: (điền)</div>
-          <div class="badge">🏮 Lịch sinh hoạt: (điền)</div>
+          <div class="badge-row">
+            <span class="mini-badge">🧧 Chủ đề: Tết</span>
+            <span class="mini-badge">👥 Số thành viên: 9</span>
+            <span class="mini-badge">✨ Hiệu ứng: Nhẹ & mượt</span>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- MAIN -->
-  <main class="main">
-    <div class="container">
-
-      <section class="section">
-        <h2 class="section-title">Ảnh & Thông tin (2 hàng, mỗi hàng 2 bên)</h2>
-
-        <div class="split">
-          <div class="col">
-            <div class="photo" style="background-image:url('images/tapthe.png');"></div>
-            </div
-
-          <div class="col">
-            <div class="info-box">
-              <h3>🌸 Giới thiệu tổ (điền sau)</h3>
-              <ul>
-                <li><strong>Lớp:</strong> 12a10</li>
-                <li><strong>Số thành viên:</strong> 6</li>
-                <li><strong>Cách học:</strong> vừa học vừa chơi</li>
-                <li><strong>Nội quy:</strong>có làm mới có ăn</li>
-              </ul>
-
-              <div class="quote">
-                <strong>🧧 Lời chúc Tết:</strong>
-                <div>"cùng nhau vượt qua để có kết quả tốt nhất trong năm học.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div style="height:14px;"></div>
-
-        <div class="split reverse">
-          <div class="col">
-            <div class="photo" style="background-image:url('images/tet2.jpg');"></div>
-            <p class="muted">Ảnh 2: thay tại <strong>images/tet2.jpg</strong></p>
-          </div>
-
-          <div class="col">
-            <div class="info-box">
-              <h3>🏮 Kế hoạch học Tết (điền sau)</h3>
-              <ul>
-                <li><strong>Mục tiêu tuần:</strong> (điền)</li>
-                <li><strong>Môn trọng tâm:</strong> (điền)</li>
-                <li><strong>Cam kết:</strong> (điền)</li>
-                <li><strong>Thưởng/phạt vui:</strong> (điền)</li>
-              </ul>
-
-              <div class="quote">
-                <strong>🌟 Điểm nhấn:</strong>
-                <div>(Điền slogan “đặc sản” của tổ.)</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">Danh sách 6 thành viên</h2>
-        <p class="muted">Nhấp vào thẻ để xem trang riêng từng thành viên.</p>
-
-        <div class="card-grid">
-
-          <a class="card" href="./tv1.html">
-            <div class="card-cover">
-              <div class="card-avatar"><div class="avatar-bg" style="background-image:url('images/tv1.jpg');"></div></div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">TV1 – (Điền tên)</h3>
-              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
-              <div class="card-tags">
-                <span class="tag">(tag)</span><span class="tag">(tag)</span><span class="tag">(tag)</span>
-              </div>
-              <span class="card-cta">Xem chi tiết →</span>
-            </div>
-          </a>
-
-          <a class="card" href="./tv2.html">
-            <div class="card-cover">
-              <div class="card-avatar"><div class="avatar-bg" style="background-image:url('images/tv2.jpg');"></div></div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">TV2 – (Điền tên)</h3>
-              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
-              <div class="card-tags">
-                <span class="tag">(tag)</span><span class="tag">(tag)</span><span class="tag">(tag)</span>
-              </div>
-              <span class="card-cta">Xem chi tiết →</span>
-            </div>
-          </a>
-
-          <a class="card" href="./tv3.html">
-            <div class="card-cover">
-              <div class="card-avatar"><div class="avatar-bg" style="background-image:url('images/tv3.jpg');"></div></div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">TV3 – (Điền tên)</h3>
-              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
-              <div class="card-tags">
-                <span class="tag">(tag)</span><span class="tag">(tag)</span><span class="tag">(tag)</span>
-              </div>
-              <span class="card-cta">Xem chi tiết →</span>
-            </div>
-          </a>
-
-          <a class="card" href="./tv4.html">
-            <div class="card-cover">
-              <div class="card-avatar"><div class="avatar-bg" style="background-image:url('images/tv4.jpg');"></div></div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">TV4 – (Điền tên)</h3>
-              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
-              <div class="card-tags">
-                <span class="tag">(tag)</span><span class="tag">(tag)</span><span class="tag">(tag)</span>
-              </div>
-              <span class="card-cta">Xem chi tiết →</span>
-            </div>
-          </a>
-
-          <a class="card" href="./tv5.html">
-            <div class="card-cover">
-              <div class="card-avatar"><div class="avatar-bg" style="background-image:url('images/tv5.jpg');"></div></div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">TV5 – (Điền tên)</h3>
-              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
-              <div class="card-tags">
-                <span class="tag">(tag)</span><span class="tag">(tag)</span><span class="tag">(tag)</span>
-              </div>
-              <span class="card-cta">Xem chi tiết →</span>
-            </div>
-          </a>
-
-          <a class="card" href="./tv6.html">
-            <div class="card-cover">
-              <div class="card-avatar"><div class="avatar-bg" style="background-image:url('images/tv6.jpg');"></div></div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-name">TV6 – (Điền tên)</h3>
-              <div class="card-meta">Vai trò: (điền) • Thế mạnh: (điền)</div>
-              <div class="card-tags">
-                <span class="tag">(tag)</span><span class="tag">(tag)</span><span class="tag">(tag)</span>
-              </div>
-              <span class="card-cta">Xem chi tiết →</span>
-            </div>
-          </a>
-
-        </div>
-      </section>
-
+    <!-- KHẨU HIỆU (SLOGAN) -->
+    <div class="slogan">
+      <div class="container slogan-inner">
+        <strong>Khẩu hiệu:</strong> (điền slogan) &nbsp;•&nbsp;
+        <strong>Mục tiêu:</strong> (điền mục tiêu ngắn) &nbsp;•&nbsp;
+        <strong>Liên hệ:</strong> (điền nếu cần)
+      </div>
     </div>
+  </header>
+
+  <!-- NỘI DUNG CHÍNH -->
+  <main class="container main">
+    <h2 class="main-title">Nội dung chính</h2>
+    <p class="muted">
+      Nhóm có 9 thành viên. Bố cục vẫn 2 cột như mẫu. Bấm vào từng ô để vào trang profile (tv1.html…tv9.html).
+    </p>
+
+    <!-- BỐ CỤC LƯỚI 2 CỘT (GIỮ Y HÌNH) -->
+    <table class="members" role="presentation">
+      <tr>
+        <td>
+          <a class="member" href="./tv1.html">
+            <div class="member-thumb" style="background-image:url('./images/tv1.jpg');"></div>
+            <div class="member-info">
+              <div class="member-name">TV1 – (Điền tên)</div>
+              <div class="member-desc">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="member-cta">Xem profile →</div>
+            </div>
+          </a>
+        </td>
+        <td>
+          <a class="member" href="./tv2.html">
+            <div class="member-thumb" style="background-image:url('./images/tv2.jpg');"></div>
+            <div class="member-info">
+              <div class="member-name">TV2 – (Điền tên)</div>
+              <div class="member-desc">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="member-cta">Xem profile →</div>
+            </div>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <a class="member" href="./tv3.html">
+            <div class="member-thumb" style="background-image:url('./images/tv3.jpg');"></div>
+            <div class="member-info">
+              <div class="member-name">TV3 – (Điền tên)</div>
+              <div class="member-desc">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="member-cta">Xem profile →</div>
+            </div>
+          </a>
+        </td>
+        <td>
+          <a class="member" href="./tv4.html">
+            <div class="member-thumb" style="background-image:url('./images/tv4.jpg');"></div>
+            <div class="member-info">
+              <div class="member-name">TV4 – (Điền tên)</div>
+              <div class="member-desc">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="member-cta">Xem profile →</div>
+            </div>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <a class="member" href="./tv5.html">
+            <div class="member-thumb" style="background-image:url('./images/tv5.jpg');"></div>
+            <div class="member-info">
+              <div class="member-name">TV5 – (Điền tên)</div>
+              <div class="member-desc">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="member-cta">Xem profile →</div>
+            </div>
+          </a>
+        </td>
+        <td>
+          <a class="member" href="./tv6.html">
+            <div class="member-thumb" style="background-image:url('./images/tv6.jpg');"></div>
+            <div class="member-info">
+              <div class="member-name">TV6 – (Điền tên)</div>
+              <div class="member-desc">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="member-cta">Xem profile →</div>
+            </div>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <a class="member" href="./tv7.html">
+            <div class="member-thumb" style="background-image:url('./images/tv7.jpg');"></div>
+            <div class="member-info">
+              <div class="member-name">TV7 – (Điền tên)</div>
+              <div class="member-desc">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="member-cta">Xem profile →</div>
+            </div>
+          </a>
+        </td>
+        <td>
+          <a class="member" href="./tv8.html">
+            <div class="member-thumb" style="background-image:url('./images/tv8.jpg');"></div>
+            <div class="member-info">
+              <div class="member-name">TV8 – (Điền tên)</div>
+              <div class="member-desc">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="member-cta">Xem profile →</div>
+            </div>
+          </a>
+        </td>
+      </tr>
+
+      <!-- TV9 nằm giữa, chiếm 2 cột để cân bố cục -->
+      <tr>
+        <td colspan="2" class="full">
+          <a class="member member-wide" href="./tv9.html">
+            <div class="member-thumb" style="background-image:url('./images/tv9.jpg');"></div>
+            <div class="member-info">
+              <div class="member-name">TV9 – (Điền tên)</div>
+              <div class="member-desc">Vai trò: (điền) • Thế mạnh: (điền)</div>
+              <div class="member-cta">Xem profile →</div>
+            </div>
+          </a>
+        </td>
+      </tr>
+    </table>
   </main>
 
+  <!-- CUỐI TRANG (FOOTER) -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>© 2026 • Website tổ học tập • Chủ đề Tết</div>
-      <div>Rồng: <strong>images/dragon-frame.png</strong></div>
+      <div class="footer-title">Liên kết đến các trang khác</div>
+
+      <div class="footer-links">
+        <a href="./index.html">Trang chủ</a>
+        <a href="./tv1.html">TV1</a>
+        <a href="./tv2.html">TV2</a>
+        <a href="./tv3.html">TV3</a>
+        <a href="./tv4.html">TV4</a>
+        <a href="./tv5.html">TV5</a>
+        <a href="./tv6.html">TV6</a>
+        <a href="./tv7.html">TV7</a>
+        <a href="./tv8.html">TV8</a>
+        <a href="./tv9.html">TV9</a>
+      </div>
+
+      <div class="footer-note">© 2026 • Website tổ học tập</div>
     </div>
   </footer>
-
 </body>
 </html>
